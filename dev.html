@@ -135,23 +135,15 @@
 										<li><a href="guide.html" class="button primary">Guide</a></li>
 										<li><a href="store.html" class="button">Store</a></li>
 										
-										<button onclick="myFunction">Copy text</button>
+										<li><button id="copy-button">Copy IP</button></li>
 									</ul>
 									<script>
-										function myFunction() {
-										  // Get the text field
-										  var copyText = ("play.coinrushmc.org");
-										
-										  // Select the text field
-										  copyText.select();
-										  copyText.setSelectionRange(0, 99999); // For mobile devices
-										
-										  // Copy the text inside the text field
-										  navigator.clipboard.writeText(copyText.value);
-										  
-										  // Alert the copied text
-										  alert("Copied the text: " + copyText.value);
-										}
+										const copyButton = document.getElementById('copy-button');
+
+										copyButton.addEventListener('click', () => {
+  											navigator.clipboard.writeText('play.coinrushmc.net');
+  										alert('Copied server IP to clipboard');
+										});
 										</script>
 								</footer>
 							</section>
